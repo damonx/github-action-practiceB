@@ -1,9 +1,24 @@
-name: Events Demo 1
+name: Demo Worrkflow filters
 on:
     pull_request:
         types:
             - opened
+        branches:
+            - main
+            - 'dev-*'
+            - 'feat/**'
+            - 'dev'
+            - 'dev/**'
     workflow_dispatch:
+    push:
+        branches:
+            - main
+            - 'dev-*'
+            - 'feat/**'
+            - 'dev'
+            - 'dev/**'
+        paths-ignore:
+            - '.github/workflows/*'
 jobs:
     deploy:
         runs-on: ubuntu-latest
