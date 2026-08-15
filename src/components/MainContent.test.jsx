@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event';
 
 import MainContent from './MainContent';
 
-// My test suite
+// My test suite for the MainContent component
 
 describe('MainContent', () => {
   it('should render a button', () => {
